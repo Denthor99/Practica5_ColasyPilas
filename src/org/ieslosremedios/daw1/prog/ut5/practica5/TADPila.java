@@ -5,15 +5,23 @@ import java.util.*;
 public class TADPila {
     private List pila=new LinkedList();
 
-    public  void encolar(Object b){
+    public  void apilar(Object b){
         pila.add(b);
-        System.out.println("Nuevo elemento añadida a la cola");
     }
-    public  void desencolar(){
+    public  void desapilar(){
         pila.remove(pila.size()-1);
     }
-    public  void frente(){
-
-        System.out.println(pila.get(pila.size()-1));
+    public  void cima(){
+        System.out.println("El primer libro es "+pila.get(pila.size()-1));
+    }
+    public void limpiar(){
+        pila.clear();
+        System.out.println("Pila borrada satisfactoriamente");
+    }
+    public boolean esVacia(){
+        return pila.isEmpty();
+    }
+    public void longitud(){
+        System.out.println("Actualmente la pila tiene una longitud de "+pila.size());
     }
 }
